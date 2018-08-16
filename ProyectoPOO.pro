@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui widgets
+QT += multimedia
+QT += multimediawidgets
 
 TARGET = ProyectoPOO
 TEMPLATE = app
@@ -23,20 +25,30 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
     buscar_win.cpp \
     display.cpp \
-    registro_win.cpp
+    registro_win.cpp \
+    camera.cpp \
+    imagesettings.cpp \
+    videosettings.cpp \
+    main.cpp
 
 HEADERS += \
     buscar_win.h \
     display.h \
-    registro_win.h
+    registro_win.h \
+    camera.h \
+    imagesettings.h \
+    videosettings.h
 
 FORMS += \
     buscar_win.ui \
     display.ui \
-    registro_win.ui
+    registro_win.ui \
+    mainwindow.ui \
+    camera.ui \
+    imagesettings.ui \
+    videosettings.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -49,3 +61,9 @@ else:unix: LIBS += -L$$PWD/../openalpr/src/build/openalpr/ -lopenalpr
 
 INCLUDEPATH += $$PWD/../openalpr/src/build/openalpr
 DEPENDPATH += $$PWD/../openalpr/src/build/openalpr
+
+SUBDIRS += \
+    ProyectoPOO.pro
+
+DISTFILES += \
+    ProyectoPOO.pro.user
