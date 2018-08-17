@@ -3,8 +3,11 @@
 
 #include <QString>
 #include "stdlib.h"
-using namespace std;
 #include "car.h"
+#include <vector>
+#include <iostream>
+
+using namespace std;
 
 class registro
 {
@@ -12,9 +15,7 @@ public:
     registro();
     registro(QString);
     void agregar(QString,QString,QString);
-    void setLastPatente(QString);
-    void setLastCargo(QString);
-    void setLastNombre(QString);
+    car getLast();
     car buscarPorNombre(QString);
     car buscarPorPatente(QString);
 private:
