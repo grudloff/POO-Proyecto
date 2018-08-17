@@ -6,6 +6,7 @@
 #include <iostream>
 #include <vector>
 #include "car.h"
+#include <fstream>
 
 using namespace std;
 
@@ -13,14 +14,14 @@ class registro
 {
 public:
     registro();
-    registro(QString);
     void agregar(QString,QString,QString);
-    car getLast();
-    car getLast(QString);
-    car buscarPorNombre(QString);
-    car buscarPorPatente(QString);
+    car* getLast();
+    car* buscarPorNombre(QString);
+    car* buscarPorPatente(QString);
+    void check(QString);
+
 private:
-    vector<car> entradas;
+    vector<car*> entradas;
     ofstream log;
 };
 
