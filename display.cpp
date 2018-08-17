@@ -77,6 +77,7 @@ void Display::on_reg_bot_clicked()
     registro_win registro_window;
     registro_window.setModal(true);
     registro_window.exec();
+    cout<< "yeah"<<endl;
 }
 
 void Display::on_buscar_bot_clicked()
@@ -89,12 +90,13 @@ void Display::on_buscar_bot_clicked()
 void Display::update()
 {
     results = openalpr->recognize("/home/gabrielrudloff/temp/foto.jpg");
-    if(results.plates.size()==0)
-            std::cout<<"Cero Patentes!"<< std::endl;
-    else{
-        std::cout<<"Se encontro patente!"<< std::endl;
-        string str="Patente: "+results.plates[0].topNPlates[0].characters+"\n"+"Nombre: Desconocido\n" + "Cargo: Desconocido";
-        QString qstr=QString::fromStdString(str);
+    if(results.plates.size()!=0){
+        QString patente=QString::fromStdString(results.plates[0].topNPlates[0].characters);
+        if(patente!=last_patente){
+            reg.check(patente);
+        }
+        last_patente=patente;
+        QString qstr = QString::fromStdString("Patente: "+patente.toStdString()+"\n"+"Nombre: Desconocido\n" + "Cargo: Desconocido");
         ui->info->setText(qstr);
     }
 }

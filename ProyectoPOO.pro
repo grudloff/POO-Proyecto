@@ -31,7 +31,8 @@ SOURCES += \
     camera.cpp \
     imagesettings.cpp \
     videosettings.cpp \
-    main.cpp
+    main.cpp \
+    car.cpp
 
 HEADERS += \
     buscar_win.h \
@@ -39,7 +40,8 @@ HEADERS += \
     registro_win.h \
     camera.h \
     imagesettings.h \
-    videosettings.h
+    videosettings.h \
+    car.h
 
 FORMS += \
     buscar_win.ui \

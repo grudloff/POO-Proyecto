@@ -10,8 +10,9 @@ car* registro::getLast(){
 }
 
 car* registro::buscarPorNombre(QString string){
-    for(car* r:entradas){
-        if (r->getNombre()==string)
+
+    for(car* r : entradas) {
+        if(r->getNombre()==string)
             return r;
     }
     return nullptr;
@@ -52,6 +53,5 @@ void registro::check(QString patente){
 
     }
     log<<"Patente: "+patente.toStdString()+" Nombre: "+cars->getNombre().toStdString()+" Cargo: "+cars->getCargo().toStdString()+"\n";
-
-
 }
+
