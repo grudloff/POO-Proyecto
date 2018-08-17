@@ -305,7 +305,7 @@ void Camera::updateLockStatus(QCamera::LockStatus status, QCamera::LockChangeRea
 void Camera::takeImage()
 {
     m_isCapturingImage = true;
-    m_imageCapture->capture("/home/gabrielrudloff/temp/foto.jpg");
+    m_imageCapture->capture("/home/diego/temp/foto.jpg");
 }
 
 void Camera::displayCaptureError(int id, const QCameraImageCapture::Error error, const QString &errorString)

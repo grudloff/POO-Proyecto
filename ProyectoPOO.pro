@@ -31,7 +31,9 @@ SOURCES += \
     camera.cpp \
     imagesettings.cpp \
     videosettings.cpp \
-    main.cpp
+    main.cpp \
+    car.cpp \
+    registro.cpp
 
 HEADERS += \
     buscar_win.h \
@@ -39,7 +41,9 @@ HEADERS += \
     registro_win.h \
     camera.h \
     imagesettings.h \
-    videosettings.h
+    videosettings.h \
+    car.h \
+    registro.h
 
 FORMS += \
     buscar_win.ui \
@@ -65,5 +69,4 @@ DEPENDPATH += $$PWD/../openalpr/src/build/openalpr
 SUBDIRS += \
     ProyectoPOO.pro
 
-DISTFILES += \
-    ProyectoPOO.pro.user
+DISTFILES +=
