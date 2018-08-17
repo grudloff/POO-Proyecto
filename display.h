@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "alpr.h"
+#include "registro.h"
 
 namespace Ui {
 class Display;
@@ -25,9 +26,11 @@ private slots:
     void update();
 
 private:
+    QString last_patente;
     Ui::Display *ui;
     alpr::Alpr *openalpr;
     alpr::AlprResults results;
+    registro reg;
 };
 
 #endif // DISPLAY_H

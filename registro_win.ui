@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>181</width>
-    <height>143</height>
+    <width>186</width>
+    <height>146</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QKeySequenceEdit" name="input_patente"/>
+        <widget class="QLineEdit" name="input_patente"/>
        </item>
       </layout>
      </item>
@@ -40,7 +40,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QKeySequenceEdit" name="input_nombre"/>
+        <widget class="QLineEdit" name="input_nombre"/>
        </item>
       </layout>
      </item>
@@ -54,7 +54,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QKeySequenceEdit" name="input_cargo"/>
+        <widget class="QLineEdit" name="input_cargo"/>
        </item>
       </layout>
      </item>

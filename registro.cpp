@@ -10,6 +10,8 @@ car* registro::getLast(){
 }
 
 car* registro::buscarPorNombre(QString string){
+    if (entradas.empty())
+        return nullptr;
     for(car* r:entradas){
         if (r->getNombre()==string)
             return r;
@@ -18,6 +20,8 @@ car* registro::buscarPorNombre(QString string){
 }
 
 car* registro::buscarPorPatente(QString string){
+    if (entradas.empty())
+        return nullptr;
     for(car* r:entradas){
         if (r->getPatente()==string)
             return r;

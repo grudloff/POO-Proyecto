@@ -2,6 +2,7 @@
 #define BUSCAR_WIN_H
 
 #include <QDialog>
+#include "registro.h"
 
 namespace Ui {
 class Buscar_win;
@@ -13,13 +14,17 @@ class Buscar_win : public QDialog
 
 public:
     explicit Buscar_win(QWidget *parent = nullptr);
+    Buscar_win(QWidget*,registro*);
     ~Buscar_win();
 
 private slots:
     void on_volver_b_clicked();
 
+    void on_buscar_button_clicked();
+
 private:
     Ui::Buscar_win *ui;
+    registro* reg;
 };
 
 #endif // BUSCAR_WIN_H
