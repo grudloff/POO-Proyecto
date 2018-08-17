@@ -3,9 +3,9 @@
 
 #include <QString>
 #include "stdlib.h"
-#include "car.h"
-#include <vector>
 #include <iostream>
+#include <vector>
+#include "car.h"
 
 using namespace std;
 
@@ -16,6 +16,7 @@ public:
     registro(QString);
     void agregar(QString,QString,QString);
     car getLast();
+    car getLast(QString);
     car buscarPorNombre(QString);
     car buscarPorPatente(QString);
 private:
