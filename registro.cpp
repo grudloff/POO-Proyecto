@@ -29,33 +29,37 @@ car* registro::buscarPorPatente(QString string){
     return nullptr;
 }
 
-void registro::agregar(QString patente, QString nombre, QString cargo){
+car* registro::agregar(QString patente, QString nombre, QString cargo){
     car* cars;
     cars=buscarPorPatente(patente);
     if (cars==nullptr){
-        car new_car(patente);
-        new_car.setNombre(nombre);
-        new_car.setCargo(cargo);
-        entradas.push_back(&new_car);
+        cars = new car(patente);
+        cars->setNombre(nombre);
+        cars->setCargo(cargo);
+        entradas.push_back(cars);
     }
     else{
         cars->setNombre(nombre);
         cars->setCargo(cargo);
     }
+    return cars;
 }
 
 void registro::check(QString patente){
     car* cars;
     cars=buscarPorPatente(patente);
     if (cars==nullptr){
-        cars= new car(patente);
-        agregar(patente, "Desconocido", "Desconocido");
-        registro_win registro_window;
+        cars=agregar(patente, "Desconocido", "Desconocido");
+        registro_win registro_window(nullptr,this);
         registro_window.setModal(true);
         registro_window.exec();
 
     }
-    log<<"Patente: "+patente.toStdString()+" Nombre: "+cars->getNombre().toStdString()+" Cargo: "+cars->getCargo().toStdString()+"\n";
+    log<<"Patente: "+cars->getPatente()+" Nombre: "+cars->getNombre().toStdString()+" Cargo: "+cars->getCargo().toStdString()+"\n";
 
 
+}
+
+bool registro::isEmpty(){
+    return entradas.empty();
 }

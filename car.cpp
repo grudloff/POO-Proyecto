@@ -8,6 +8,8 @@ car::car()
 car::car(QString string)
 {
 patente=string;
+nombre="Desconocido";
+cargo="Desconocido";
 }
 
 QString car::getPatente(){

@@ -14,11 +14,13 @@ class registro
 {
 public:
     registro();
-    void agregar(QString,QString,QString);
+    car* agregar(QString,QString,QString);
     car* getLast();
     car* buscarPorNombre(QString);
     car* buscarPorPatente(QString);
     void check(QString);
+    bool isEmpty();
+
 
 private:
     vector<car*> entradas;

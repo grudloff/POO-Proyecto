@@ -69,4 +69,5 @@ DEPENDPATH += $$PWD/../openalpr/src/build/openalpr
 SUBDIRS += \
     ProyectoPOO.pro
 
-DISTFILES +=
+DISTFILES += \
+    ProyectoPOO.pro.user

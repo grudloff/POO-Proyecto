@@ -30,7 +30,8 @@ private:
     Ui::Display *ui;
     alpr::Alpr *openalpr;
     alpr::AlprResults results;
-    registro reg;
+public:
+    registro* reg;
 };
 
 #endif // DISPLAY_H

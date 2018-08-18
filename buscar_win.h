@@ -16,6 +16,7 @@ public:
     explicit Buscar_win(QWidget *parent = nullptr);
     Buscar_win(QWidget*,registro*);
     ~Buscar_win();
+    registro* reg;
 
 private slots:
     void on_volver_b_clicked();
@@ -24,7 +25,7 @@ private slots:
 
 private:
     Ui::Buscar_win *ui;
-    registro* reg;
+
 };
 
 #endif // BUSCAR_WIN_H
