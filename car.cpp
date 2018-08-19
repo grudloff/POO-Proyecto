@@ -1,15 +1,16 @@
 #include "car.h"
 
-car::car()
-{
-
-}
-
 car::car(QString string)
 {
 patente=string;
 nombre="Desconocido";
 cargo="Desconocido";
+}
+car::car(QString patente,QString nombre,QString cargo)
+{
+this->patente=patente;
+this->nombre=nombre;
+this->cargo=cargo;
 }
 
 QString car::getPatente(){

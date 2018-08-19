@@ -1,13 +1,12 @@
 #include "display.h"
 #include "ui_display.h"
-#include "registro_win.h"
-#include "buscar_win.h"
 #include <string.h>
 #include <QString>
 #include <QTimer>
 #include <iostream>
 
 using namespace std;
+
 
 Display::Display(QWidget *parent) :
     QMainWindow(parent),
@@ -93,23 +92,23 @@ void Display::update()
 {
     results = openalpr->recognize("/home/gabrielrudloff/temp/foto.jpg");
         if(results.plates.size()!=0){
-            //agregar requerimiento de confidencia
             QString patente=QString::fromStdString(results.plates[0].topNPlates[0].characters);
             if(patente!=last_patente){
                 QString qstr = "Patente: "+ patente+"\n"+"Nombre: Desconocido \n Cargo: Desconocido" ;
                 ui->info->setText(qstr);
-                reg->check(patente);
+                car* cars = reg->check(patente);
+                if(cars!=nullptr){
+                    QString qstr = "Patente: "+ cars->getPatente()+"\n"+"Nombre: "+ cars->getNombre()+"\n" + "Cargo: "+ cars->getCargo();
+                    ui->info->setText(qstr);
+                }
                 last_patente=patente;
-
             }
-
-
         }
 
-        if(!reg->isEmpty()){
-            car* cars= reg->getLast();
-            QString qstr = "Patente: "+ cars->getPatente()+"\n"+"Nombre: "+ cars->getNombre()+"\n" + "Cargo:"+ cars->getCargo();
-            ui->info->setText(qstr);
-        }
+//        if(!reg->isEmpty()){
+//            car* cars= reg->getLast();
+//            QString qstr = "Patente: "+ cars->getPatente()+"\n"+"Nombre: "+ cars->getNombre()+"\n" + "Cargo: "+ cars->getCargo();
+//            ui->info->setText(qstr);
+//        }
 }
 

@@ -64,6 +64,8 @@
 
 #include <QtWidgets>
 
+#include <QTimer>
+
 Q_DECLARE_METATYPE(QCameraInfo)
 
 Camera::Camera() : ui(new Ui::Camera)
@@ -89,6 +91,10 @@ Camera::Camera() : ui(new Ui::Camera)
     connect(ui->captureWidget, &QTabWidget::currentChanged, this, &Camera::updateCaptureMode);
 
     setCamera(QCameraInfo::defaultCamera());
+
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(update()));
+    timer->start(500);
 }
 
 void Camera::setCamera(const QCameraInfo &cameraInfo)
@@ -428,4 +434,8 @@ void Camera::closeEvent(QCloseEvent *event)
     } else {
         event->accept();
     }
+}
+
+void Camera::update(){
+    takeImage();
 }

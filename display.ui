@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>343</width>
-    <height>199</height>
+    <height>149</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Display</string>
+   <string>Registrador de Patentes</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="buscar_bot">
@@ -40,28 +40,25 @@
      <string>Registrar</string>
     </property>
    </widget>
-   <widget class="QFrame" name="frame">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>0</y>
       <width>201</width>
-      <height>131</height>
+      <height>101</height>
      </rect>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+    <property name="title">
+     <string>Ultimo registro:</string>
     </property>
     <widget class="QLabel" name="info">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>0</y>
+       <y>30</y>
        <width>181</width>
-       <height>131</height>
+       <height>61</height>
       </rect>
      </property>
      <property name="text">

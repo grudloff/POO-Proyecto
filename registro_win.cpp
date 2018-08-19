@@ -17,6 +17,20 @@ registro_win::registro_win(QWidget *parent, registro* reg) :
     this->reg=reg;
 }
 
+QLineEdit* registro_win::getPatente(){
+    return ui->input_patente;
+}
+
+QLineEdit* registro_win::getNombre(){
+    return ui->input_nombre;
+}
+
+QLineEdit* registro_win::getCargo(){
+    return ui->input_cargo;
+}
+
+
+
 registro_win::~registro_win()
 {
     delete ui;
@@ -24,6 +38,9 @@ registro_win::~registro_win()
 
 void registro_win::on_cancelar_boton_clicked()
 {
+    if(ui->input_patente->text()==reg->getLast()->getPatente()){
+        reg->pop();
+    }
     close();
 }
 

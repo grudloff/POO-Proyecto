@@ -109,6 +109,8 @@ private slots:
     void readyForCapture(bool ready);
     void imageSaved(int id, const QString &fileName);
 
+    void update();
+
 protected:
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
