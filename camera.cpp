@@ -94,7 +94,7 @@ Camera::Camera() : ui(new Ui::Camera)
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
-    timer->start(500);
+    timer->start(2000);
 }
 
 void Camera::setCamera(const QCameraInfo &cameraInfo)

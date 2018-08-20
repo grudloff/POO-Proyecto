@@ -1,0 +1,3 @@
+<map id="Ui::Buscar_win" name="Ui::Buscar_win">
+<area shape="rect" id="node2" href="$class_ui___buscar__win.html" title="{Ui_Buscar_win\n|+ verticalLayoutWidget\l+ verticalLayout\l+ horizontalLayout\l+ opcion_p\l+ opcion_n\l+ input\l+ horizontalLayoutWidget\l+ horizontalLayout_2\l+ buscar_button\l+ volver_b\l+ groupBox\l+ info_b\l|+ setupUi()\l+ retranslateUi()\l}" alt="" coords="5,5,176,259"/>
+</map>

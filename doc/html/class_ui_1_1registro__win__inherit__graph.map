@@ -1,0 +1,3 @@
+<map id="Ui::registro_win" name="Ui::registro_win">
+<area shape="rect" id="node2" href="$class_ui__registro__win.html" title="{Ui_registro_win\n|+ verticalLayout_3\l+ verticalLayout_2\l+ horizontalLayout\l+ label\l+ input_patente\l+ horizontalLayout_2\l+ label_2\l+ input_nombre\l+ horizontalLayout_3\l+ label_3\l+ input_cargo\l+ horizontalLayout_4\l+ agregar_boton\l+ cancelar_boton\l|+ setupUi()\l+ retranslateUi()\l}" alt="" coords="5,5,148,288"/>
+</map>
