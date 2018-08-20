@@ -1,3 +1,0 @@
-<map id="Ui::ImageSettingsUi" name="Ui::ImageSettingsUi">
-<area shape="rect" id="node2" href="$class_ui___image_settings_ui.html" title="{Ui_ImageSettingsUi\n|+ gridLayout\l+ groupBox_2\l+ gridLayout_2\l+ label_8\l+ imageResolutionBox\l+ label_6\l+ imageCodecBox\l+ label_7\l+ imageQualitySlider\l+ verticalSpacer\l+ buttonBox\l|+ setupUi()\l+ retranslateUi()\l}" alt="" coords="5,5,160,244"/>
-</map>
